@@ -9,7 +9,7 @@ import (
 )
 
 /*
-優先順位を定義する
+演算子の優先順位を定義する
 */
 const (
 	_ int = iota
@@ -22,6 +22,9 @@ const (
 	CALL        // myFunction(X)
 )
 
+/*
+演算子をconstで定義した優先順位に割り当てる
+*/
 var precedences = map[token.TokenType]int{
 	token.EQ:       EQUALS,
 	token.NOT_EQ:   EQUALS,
